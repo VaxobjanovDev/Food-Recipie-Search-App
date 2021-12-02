@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Simple Recipie App
 
 This project was maked Reactjs and you can see this simple app https://recipies-apps.netlify.app
 
