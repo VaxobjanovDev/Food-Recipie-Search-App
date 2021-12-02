@@ -1,11 +1,15 @@
 import React from 'react'
 import Input from './Input'
 
-const Header = ({setInput,input}) => {
+const Header = ({setRecipie,setInput,input}) => {
+    function onSubmit(){
+        setRecipie(input)
+    }
     return (
         <div className='text-header'>
             <h1>Food Recipie Search App</h1>
-            <Input input={input} setInput={setInput}/>
+            <Input setRecipie={setRecipie} input={input} setInput={setInput}/>
+            <button className='button btn-blue' onClick={onSubmit}>Search</button>
         </div>
     )
 }

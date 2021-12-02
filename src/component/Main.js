@@ -1,40 +1,47 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import Card from './Card'
-import Header from './Header'
-import Input from './Input'
-import './Main.css'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Card from "./Card";
+import Header from "./Header";
+import Loader from "./Loader";
+import "./Main.css";
 
 const Main = () => {
-    const [data, setData] = useState([])
-    const [input, setInput] = useState("salad")
-    const [loading, setLoading] = useState(true)
+  const [data, setData] = useState([]);
+  const [input, setInput] = useState("");
+  const [recipie, setRecipie] = useState("salad");
+  const [loading, setLoading] = useState(false);
 
-    const YOUR_APP_KEY = "402f97b652061bb00d18f9893f042562"
-    const app_key_id = "79e6eb56"
+  const YOUR_APP_KEY = "Your App Key";
+  const app_key_id = "Your ID";
 
-    const fetchApi = async()=>{
-        try{
-            const response = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&q=${input}&app_id=${app_key_id}&app_key=${YOUR_APP_KEY}`)
-            setData(response.data.hits)
-        }catch{
-            console.log("error")
-        }
-        
-    }
+  useEffect(() => {
+    const fetchApi = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(
+          `https://api.edamam.com/api/recipes/v2?type=public&q=${recipie}&app_id=${app_key_id}&app_key=${YOUR_APP_KEY}`
+        );
+        setData(response.data.hits);
+        setLoading(false);
+      } catch {
+        console.log("error");
+      }
+    };
+    fetchApi();
+  }, [recipie]);
 
-    useEffect(()=>{
-        fetchApi()
-    },[input,data])
-
-    return (
-        <div className='section'>
-            <div className='container'>
-                <Header input={input} setInput={setInput}/>
-                <Card data={data}/>
-            </div>
+  return (
+    <div className="section">
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="container">
+          <Header setRecipie={setRecipie} input={input} setInput={setInput} />
+          <Card data={data} />
         </div>
-    )
-}
+      )}
+    </div>
+  );
+};
 
-export default Main
+export default Main;

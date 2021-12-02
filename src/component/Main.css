@@ -1,110 +1,121 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body,html{
-    overflow-x: hidden;
+body,
+html {
+  overflow-x: hidden;
 }
 
-.section{
-    min-height: 100vh;
-    background: #91E19B;
+.section {
+  min-height: 100vh;
+
+  background: #91e19b;
 }
 
-.container{
-    padding: 1rem 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;  
-    justify-content: center;
+.container {
+  padding: 1rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.text-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+.text-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
-.text-header h1{
-    padding: 1rem;
-    font-size: 2.5rem;
-    font-weight: 700;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.text-header h1 {
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-input{
-    margin: 0 auto;
-    font-size: 1.5rem;
-    outline: none;
-    width: 70%;
+input {
+  padding: 2px 5px;
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  outline: none;
+  width: 70%;
 }
- 
-.card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-} 
-
-.card-body{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 2rem;
-    width: 280px;
-    height: 400px;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    padding: 5px;
-    background: #F65141;
+.button {
+  margin: 0.5rem auto;
+  width: 70%;
 }
-.card-content{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(231, 240, 248);
-    margin: 0.5rem auto;
-}
-button{
-    font-weight: 600;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    color: rgb(231, 240, 248);
-    cursor: pointer;
-    margin: 4px 0;
-    padding: 5px;
-    border: none; 
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.btn-pink{
-    background: #508858;
+.card-body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 2rem;
+  width: 280px;
+  height: 400px;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 5px;
+  background: #f65141;
+}
+.card-content {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(231, 240, 248);
+  margin: 0.5rem auto;
+}
+button {
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: rgb(231, 240, 248);
+  cursor: pointer;
+  margin: 4px 0;
+  padding: 5px;
+  border: none;
 }
 
-.btn-blue{
-    background: rgb(92, 126, 228);
+.btn-pink {
+  background: #508858;
 }
 
-a{
-    text-decoration: none;
-    color: rgb(231, 240, 248);
+.btn-blue {
+  background: rgb(92, 126, 228);
 }
 
-.card-body img{
-    width: 100%;
-    object-fit: cover;
+a {
+  text-decoration: none;
+  color: rgb(231, 240, 248);
 }
 
-.items{
-    border-radius: 10px;
-    z-index: 1;
-    margin: 1rem 0 0 0;
-    background: salmon;
+.card-body img {
+  width: 100%;
+  object-fit: cover;
 }
 
-.items li{
-    font-size: 1.2rem;
-    color: rgb(231, 240, 248);
-    margin: 5px;
-    padding: 5px;
-    list-style: none;
-    border-bottom: 1px solid #ada1a1;
+.items {
+  height: 100%;
+  border-radius: 10px;
+  z-index: 1;
+  margin: 1rem;
+  background: rgb(238, 121, 108);
+}
+
+.items li {
+  font-size: 1.2rem;
+  color: rgb(231, 240, 248);
+  margin: 5px;
+  padding: 5px;
+  list-style: none;
+  border-bottom: 1px solid #ada1a1;
 }
