@@ -8,6 +8,7 @@ import './Main.css'
 const Main = () => {
     const [data, setData] = useState([])
     const [input, setInput] = useState("salad")
+    const [loading, setLoading] = useState(true)
 
     const YOUR_APP_KEY = "402f97b652061bb00d18f9893f042562"
     const app_key_id = "79e6eb56"
@@ -24,13 +25,12 @@ const Main = () => {
 
     useEffect(()=>{
         fetchApi()
-    },[input])
+    },[input,data])
 
     return (
         <div className='section'>
             <div className='container'>
-                <Header/>
-                <Input setInput={setInput}/>
+                <Header input={input} setInput={setInput}/>
                 <Card data={data}/>
             </div>
         </div>

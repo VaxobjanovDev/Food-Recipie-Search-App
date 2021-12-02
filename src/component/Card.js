@@ -1,4 +1,7 @@
 import React from "react";
+import { useState } from "react/cjs/react.development";
+import {v4 as uuidv4} from 'uuid'
+import Cards from "./Cards";
 
 const Card = ({ data }) => {
   console.log(data);
@@ -7,13 +10,7 @@ const Card = ({ data }) => {
       <div className="card">
         {data !== [] &&
           data.map((item) => (
-            <div className="card-body">
-              <img src={item.recipe.image} />
-              <div className="card-content">
-                <p>{item.recipe.label}</p>
-                <a href={item.recipe.shareAs}>url</a>
-              </div>
-            </div>
+            <Cards key={uuidv4()} item={item.recipe}/>
           ))}
       </div>
     </div>

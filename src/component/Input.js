@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+const Input = ({ setInput, input }) => {
+return (
+    <>
+        <input
+          placeholder="Search Recipie"
+          onChange={(e) => setInput(e.target.value)}
+        />
+    </>
+  );
+};
 
-const Input = ({setInput}) => {
-    return (
-        <>
-          <input onChange={(e)=>setInput(e.target.value)}/>  
-        </>
-    )
-}
-
-export default Input
+export default Input;
